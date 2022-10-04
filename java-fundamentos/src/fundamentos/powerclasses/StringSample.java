@@ -10,10 +10,10 @@ public class StringSample {
          * Link documentação oficial oracle versão 18
          * https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html
          */
-        //metodoConcat();
-        //metodoContains();
-        //metodoIsBlank();
-        //metodoLowerUpperCase();
+        metodoConcat();
+        metodoContains();
+        metodoIsBlank();
+        metodoLowerUpperCase();
 
         //dinamica do emissor de cheque valor extenso
         //Exibir o valor cheque por extenso em 50 caracteres completados por *
