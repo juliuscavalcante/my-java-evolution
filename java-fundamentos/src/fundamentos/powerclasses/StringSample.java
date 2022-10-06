@@ -14,6 +14,9 @@ public class StringSample {
         metodoContains();
         metodoIsBlank();
         metodoLowerUpperCase();
+        metodoCompareTo();
+
+
 
         //dinamica do emissor de cheque valor extenso
         //Exibir o valor cheque por extenso em 50 caracteres completados por *
@@ -73,7 +76,39 @@ public class StringSample {
 
         //vamos ver a diferença entre isBlank versus isEmpty
         //https://howtodoinjava.com/java11/check-blank-string/#:~:text=isBlank()%20vs%20isEmpty(),not%20check%20the%20string%20length.
+    }
 
+    static void metodoCompareTo() {
+
+        /* O método compareTo compara duas Strings lexicograficamente (por ordem alfabética).
+        O método retorna um número negativo caso a primeira String esteja na frente na ordem e
+        um positivo caso a segunda String venha primeiro. Também existe o compareToIgnoreCase
+        que ignora a diferença entre letras maiúsculas e minúsculas*/
+
+
+        String string1 = "HelloWorld";
+        String string2 = "helloworld";
+
+        int comparacao = string1.compareTo(string2);
+        if (comparacao < 0) {
+            System.out.println("A primeira String: '" + string1 + "' está na frente na ordem alfabética");
+        } else if (comparacao > 0) {
+            System.out.println("A segunda String: '" + string2 + "' está na frente na ordem alfabética");
+        } else {
+            System.out.println("As duas Strings: '" + string1 + " e " + string2 + "' emptam na ordem alfabética");
+        }
+
+        String string3 = "HelloWorld";
+        String string4 = "HelloWorld";
+
+        int comparacao2 = string3.compareToIgnoreCase(string4);
+        if (comparacao2 < 0) {
+            System.out.println("A primeira String: '" + string1 + "' está na frente na ordem alfabética");
+        } else if (comparacao2 > 0) {
+            System.out.println("A segunda String: '" + string2 + "' está na frente na ordem alfabética");
+        } else {
+            System.out.println("As duas Strings: '" + string1 + " e " + string2 + "' emptam na ordem alfabética");
+        }
     }
 }
 
