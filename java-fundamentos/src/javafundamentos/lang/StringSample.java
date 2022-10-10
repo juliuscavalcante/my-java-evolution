@@ -1,4 +1,4 @@
-package fundamentos.powerclasses;
+package javafundamentos.lang;
 
 public class StringSample {
 
