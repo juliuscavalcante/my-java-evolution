@@ -3,25 +3,21 @@ package javafundamentos.lang;
 public class StringSample {
 
     public static void main(String[] args) {
-        /**
-         * A classe String é utilizada para respresentar conteudos alfanumericos, exemplo:
-         * JOSE, maria, NIJ-3323, 123@master
-         *
+        /*
          * Link documentação oficial oracle versão 18
          * https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html
          */
-        metodoConcat();
-        metodoContains();
-        metodoIsBlank();
-        metodoLowerUpperCase();
-        metodoCompareTo();
 
+        //metodoConcat();
+        //metodoContains();
+        //metodoIsBlank();
+        //metodoLowerUpperCase();
+        //metodoCompareTo();
+        //metodoSplit();
+        metodoSubString();
 
-
-        //dinamica do emissor de cheque valor extenso
-        //Exibir o valor cheque por extenso em 50 caracteres completados por *
-        //Exemplo: Um mil e duzentos reais ***************** -
     }
+
     static void metodoLowerUpperCase(){
         /** métodos que tornam as palavras  minusculas respectivamente*/
 
@@ -32,6 +28,7 @@ public class StringSample {
         java.lang.String deNovoMaiusculo = nomeMinusculo.toUpperCase();
         System.out.println(deNovoMaiusculo);
     }
+
     static void metodoConcat(){
         /** O metódo concat realiza a junção entre dois alfanumericos,
          * podendo ser de forma recursiva já que o retonro
@@ -44,6 +41,7 @@ public class StringSample {
         System.out.println(nomeCompleto);
 
     }
+
     static void metodoContains(){
         /** O metódo contains analisa se existe o texto passado como parametro
          * em uma determinada variável do tipo String retorna um valor boolean
@@ -57,6 +55,7 @@ public class StringSample {
                 .concat(palavra).concat("?\nResposta:").concat( resposta.toString() ));
 
     }
+
     static void metodoIsBlank(){
         /** Retorna true se a string estiver vazia ou contiver apenas
          codepoints de espaço em branco, caso contrário, false.
@@ -109,6 +108,37 @@ public class StringSample {
         } else {
             System.out.println("As duas Strings: '" + string1 + " e " + string2 + "' emptam na ordem alfabética");
         }
+    }
+
+    static void metodoSplit() {
+
+        /* Cria um array de String com base no regex passado via parâmetro,
+        * ou seja, divide a String em várias outras String, com base no regex.
+        */
+
+        // sem o limit
+        String string1 = "string-java";
+        String[] stringComSplit = string1.split("-");
+        for (String s : stringComSplit) {
+            System.out.println(s);
+        }
+
+        // com o limit
+        String string2 = "string-java-exemple-split";
+        String[] stringComSplit2 = string2.split("-",2);
+        for (String s : stringComSplit2) {
+            System.out.println(s);
+        }
+    }
+
+    static void metodoSubString() {
+
+        // Retona uma parte específica de uma String.
+        // O método cria uma nova String
+
+        String string = "aeiou";
+        String subString = string.substring(0, 2);
+        System.out.println(subString);
     }
 }
 
