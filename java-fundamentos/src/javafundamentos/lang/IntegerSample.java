@@ -2,6 +2,8 @@ package javafundamentos.lang;
 
 import java.lang.Integer;
 
+import static java.lang.Integer.sum;
+
 public class IntegerSample {
 
     public static void main(String[] args) {
@@ -14,7 +16,10 @@ public class IntegerSample {
          */
 
         // Métodos de teste
+
         metodoMaxAndMin(4, 5);
+        metodoSum(12,4);
+
 
 
     }
@@ -25,6 +30,13 @@ public class IntegerSample {
 
         System.out.println("Maior valor: " + Integer.max(n1,n2));
         System.out.println("Menor valor: " + Integer.min(n1,n2));
+    }
+
+    public static void metodoSum(Integer a, Integer b) {
+
+        /** retorna a Soma de dois números */
+
+        System.out.println("A soma de " + a + " + " + b + " = " + sum(a,b));
     }
 }
 
